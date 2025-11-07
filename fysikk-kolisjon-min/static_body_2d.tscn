@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkklvxkjics2k"]
+
+[ext_resource type="Texture2D" uid="uid://cl0pu38bwa2df" path="res://tanks-simple.png" id="1_yjt17"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypqmy"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(-1, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yjt17")
+region_enabled = true
+region_rect = Rect2(15, 99, 56, 56)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ypqmy")

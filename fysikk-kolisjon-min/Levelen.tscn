@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=4 uid="uid://bj1jaympdexm7"]
+
+[ext_resource type="Texture2D" uid="uid://cfb4rmmvku0mm" path="res://tanks-terrain.png" id="1_omnae"]
+[ext_resource type="PackedScene" uid="uid://cul3unf0275y5" path="res://stilebokss.tscn" id="3_eillu"]
+[ext_resource type="PackedScene" uid="uid://845enyd0hmhd" path="res://boksflot.tscn" id="4_48wo3"]
+[ext_resource type="PackedScene" uid="uid://dftr1k5mh55sr" path="res://Tenks.tscn" id="4_eillu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vr8h1"]
+texture = ExtResource("1_omnae")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_wx4w4"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_vr8h1")
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(1, 1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(11, 1)
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAAAAAABAAQAAAAAAAAAAAACAAAAAAAAAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAADAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAADAAQAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAQAAAAAAAAAAAAFAAAAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAIAAAAAAAAAAAAFAAMAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAAAAAAAAAAAAAAGAAEAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_wx4w4")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("4_eillu")]
+position = Vector2(192, 407)
+rotation = -1.5707964
+
+[node name="RigidBody2D" parent="." instance=ExtResource("4_48wo3")]
+position = Vector2(349, 392)
+mass = 12.616
+gravity_scale = 0.706
+
+[node name="Stilebokss" parent="." instance=ExtResource("3_eillu")]
+position = Vector2(262, 509.00006)
+scale = Vector2(5.283803, 0.67953056)
+
+[node name="Stilebokss2" parent="." instance=ExtResource("3_eillu")]
+position = Vector2(730, 565)
+scale = Vector2(12.717899, -0.7837779)

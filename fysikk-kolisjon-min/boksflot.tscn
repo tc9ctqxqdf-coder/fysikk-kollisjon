@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://845enyd0hmhd"]
+
+[ext_resource type="Texture2D" uid="uid://cl0pu38bwa2df" path="res://tanks-simple.png" id="1_auhv5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ldgsh"]
+size = Vector2(54, 54)
+
+[node name="RigidBody2D" type="RigidBody2D"]
+position = Vector2(8, 1)
+collision_layer = 2
+gravity_scale = 1.04
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_auhv5")
+region_enabled = true
+region_rect = Rect2(99, 183, 56, 56)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ldgsh")
